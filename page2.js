@@ -1,5 +1,5 @@
 const earth = document.createElement("img");
-earth.src = "Videos/earth.jpg";
+earth.src = "videos/earth.jpg";
 
 earth.className = "earth";
 
