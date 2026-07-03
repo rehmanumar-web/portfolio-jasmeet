@@ -1,0 +1,381 @@
+/* ---------- GOOGLE FONTS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Dancing+Script:wght@700&display=swap');
+
+/* ---------- PAGE ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Cormorant Garamond',serif;
+    background:#1b1714;
+    min-height:100vh;
+    padding:70px 20px;
+    overflow-x:hidden;
+    position:relative;
+
+    background:
+    radial-gradient(circle at top,#4b311d 0%,#2b1d13 30%,#1b1714 80%);
+}
+
+/* ---------- LETTER ---------- */
+
+.letter{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:75px;
+
+    background:#f6ead3;
+
+    color:#3f2d1f;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 0 70px rgba(255,190,90,.25),
+    0 25px 80px rgba(0,0,0,.45);
+
+    animation:fade 1.5s ease;
+}
+
+/* ---------- BURNT EDGES ---------- */
+
+.letter::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(circle at top left,rgba(70,35,15,.35),transparent 18%),
+
+radial-gradient(circle at top right,rgba(70,35,15,.30),transparent 18%),
+
+radial-gradient(circle at bottom left,rgba(70,35,15,.30),transparent 18%),
+
+radial-gradient(circle at bottom right,rgba(70,35,15,.35),transparent 18%);
+
+mix-blend-mode:multiply;
+
+}
+
+.letter::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+pointer-events:none;
+
+border:10px solid rgba(95,55,20,.18);
+
+border-radius:8px;
+
+box-shadow:
+inset 0 0 45px rgba(70,35,15,.35);
+}
+
+/* ---------- HEADINGS ---------- */
+
+h1{
+
+font-size:64px;
+
+font-family:'Dancing Script',cursive;
+
+text-align:center;
+
+color:#8c5b5b;
+
+margin-bottom:35px;
+
+}
+
+.opening{
+
+font-size:38px;
+
+font-weight:700;
+
+margin-bottom:35px;
+
+}
+
+h2{
+
+margin-top:60px;
+
+font-size:40px;
+
+text-align:center;
+
+}
+
+h3{
+
+font-size:34px;
+
+margin-top:15px;
+
+}
+
+/* ---------- TEXT ---------- */
+
+p{
+
+font-size:30px;
+
+line-height:1.9;
+
+margin-top:30px;
+
+}
+
+.break{
+
+text-align:center;
+
+font-size:34px;
+
+font-weight:bold;
+
+margin:70px 0;
+
+}
+
+.highlight{
+
+font-size:36px;
+
+font-weight:bold;
+
+text-align:center;
+
+color:#7c3030;
+
+}
+
+.small{
+
+text-align:center;
+
+font-style:italic;
+
+}
+
+.signature{
+
+margin-top:60px;
+
+text-align:center;
+
+}
+
+hr{
+
+margin:70px 0;
+
+border:none;
+
+height:1px;
+
+background:#b69b76;
+
+}
+
+.ending{
+
+text-align:center;
+
+}
+
+.ending h2{
+
+font-size:50px;
+
+margin-bottom:10px;
+
+}
+
+.ending p{
+
+font-style:italic;
+
+}
+
+/* ---------- MUSIC BUTTON ---------- */
+
+#musicButton{
+
+position:fixed;
+
+right:28px;
+
+bottom:28px;
+
+border:none;
+
+padding:15px 28px;
+
+font-size:18px;
+
+cursor:pointer;
+
+border-radius:999px;
+
+background:#fff;
+
+box-shadow:0 12px 35px rgba(0,0,0,.3);
+
+transition:.35s;
+
+z-index:1000;
+
+}
+
+#musicButton:hover{
+
+transform:translateY(-3px) scale(1.05);
+
+}
+
+/* ---------- PETALS ---------- */
+
+.petals{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.petals span{
+
+position:absolute;
+
+top:-40px;
+
+width:14px;
+
+height:14px;
+
+background:#f3b4c4;
+
+border-radius:70% 30% 70% 30%;
+
+opacity:.55;
+
+animation:fall linear infinite;
+
+}
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes fall{
+
+from{
+
+transform:
+translateY(-10vh)
+rotate(0deg);
+
+}
+
+to{
+
+transform:
+translateY(115vh)
+rotate(360deg);
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+.letter{
+
+padding:40px 28px;
+
+}
+
+h1{
+
+font-size:42px;
+
+}
+
+.opening{
+
+font-size:26px;
+
+}
+
+p{
+
+font-size:21px;
+
+}
+
+.break{
+
+font-size:26px;
+
+}
+
+.highlight{
+
+font-size:28px;
+
+}
+
+h2{
+
+font-size:30px;
+
+}
+
+}
