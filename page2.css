@@ -27,23 +27,23 @@ body{
 }
 
 @keyframes zoomEarth{
-
     0%{
         transform:scale(.8);
-        filter:brightness(.9);
+        filter:brightness(1);
     }
 
     30%{
         transform:scale(1.2);
+        filter:brightness(1);
     }
 
     60%{
         transform:scale(2.8);
+        filter:brightness(1);
     }
 
-100%{
-    transform:scale(12);
-    opacity:0;
-}
-
+    100%{
+        transform:scale(8);
+        filter:brightness(1);
+    }
 }
